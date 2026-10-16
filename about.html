@@ -3,37 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="О компании CurtainHouse: 15 лет на рынке, собственное производство, дизайнеры и швеи с опытом.">
+  <meta name="description" content="О компании CurtainHouse: 15 лет на рынке, собственное производство.">
   <title>О компании — CurtainHouse</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- ШАПКА -->
-<header>
-  <a href="index.html">
-    <img src="10.jpg" alt="Логотип CurtainHouse" width="60" height="60">
-    <strong>CurtainHouse</strong>
-  </a>
-  <nav aria-label="Основное меню">
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog.html">Каталог</a></li>
-      <li><a href="product.html">О товаре</a></li>
-      <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="faq.html" >Вопросы</a></li>
-      <li><a href="about.html">О компании</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
-      <li><a href="login.html">Вход</a></li>
-      <li><a href="register.html">Регистрация</a></li>
-      <li><a href="profile.html">Кабинет</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-  <main>
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="10.jpg" alt="Логотип CurtainHouse" width="48" height="48">
+      <strong>CurtainHouse</strong>
+    </a>
+    <label class="theme-toggle" aria-label="Переключить тему">
+  <input type="checkbox" class="theme-toggle__input" id="theme-toggle">
+  <span class="theme-toggle__icon">🌙</span>
+</label>
+    <input type="checkbox" id="burger" class="header__burger-input">
+    <label for="burger" class="header__burger" aria-label="Меню">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </label>
+    <nav class="header__nav" aria-label="Основное меню">
+      <ul class="header__menu">
+        <li><a href="index.html" class="header__menu-link">Главная</a></li>
+        <li><a href="catalog.html" class="header__menu-link">Каталог</a></li>
+        <li><a href="product.html" class="header__menu-link">О товаре</a></li>
+        <li><a href="delivery.html" class="header__menu-link">Доставка</a></li>
+        <li><a href="faq.html" class="header__menu-link">Вопросы</a></li>
+        <li><a href="about.html" class="header__menu-link header__menu-link--active" aria-current="page">О компании</a></li>
+        <li><a href="contacts.html" class="header__menu-link">Контакты</a></li>
+        <li><a href="login.html" class="header__menu-link">Вход</a></li>
+        <li><a href="register.html" class="header__menu-link">Регистрация</a></li>
+        <li><a href="profile.html" class="header__menu-link">Кабинет</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main" id="main">
     <h1>О компании CurtainHouse</h1>
 
-    <!-- Вводная секция с фото -->
     <section>
       <h2>Кто мы</h2>
       <p>CurtainHouse — салон штор и домашнего текстиля, работающий с 2011 года.
@@ -41,27 +51,21 @@
          под стиль каждого дома.</p>
 
       <figure>
-        <img src="8c.jpg" alt="Швейный цех CurtainHouse: швеи за работой" width="640" height="400">
+        <img src="8c.jpg" alt="Швейный цех CurtainHouse" width="640" height="400">
         <figcaption>Наше производство в центре города</figcaption>
       </figure>
     </section>
 
-    <!-- Цифры -->
     <section>
       <h2>Наши цифры</h2>
       <dl>
-        <dt>Опыт работы</dt>
-        <dd>15 лет на рынке</dd>
-        <dt>Клиентов</dt>
-        <dd>более 12 000 счастливых семей</dd>
-        <dt>Тканей в наличии</dt>
-        <dd>более 500 видов</dd>
-        <dt>Собственное производство</dt>
-        <dd>300 м² в центре города</dd>
+        <dt>Опыт работы</dt><dd>15 лет на рынке</dd>
+        <dt>Клиентов</dt><dd>более 12 000 семей</dd>
+        <dt>Тканей в наличии</dt><dd>более 500 видов</dd>
+        <dt>Производство</dt><dd>300 м² в центре города</dd>
       </dl>
     </section>
 
-    <!-- Принципы -->
     <section>
       <h2>Наши принципы</h2>
       <ul>
@@ -72,27 +76,24 @@
       </ul>
     </section>
 
-    <!-- Команда -->
     <section>
       <h2>Наша команда</h2>
-
-      <article>
-        <h3>Анна Смирнова</h3>
-        <p>Главный дизайнер. 12 лет опыта в интерьерном текстиле.</p>
-      </article>
-
-      <article>
-        <h3>Игорь Волков</h3>
-        <p>Технолог производства. Отвечает за качество каждой строчки.</p>
-      </article>
-
-      <article>
-        <h3>Мария Кузнецова</h3>
-        <p>Менеджер по работе с клиентами. Поможет выбрать ткань и размер.</p>
-      </article>
+      <div class="card-grid">
+        <article class="card">
+          <h3 class="card__title">Анна Смирнова</h3>
+          <p class="card__meta">Главный дизайнер. 12 лет опыта в интерьерном текстиле.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Игорь Волков</h3>
+          <p class="card__meta">Технолог производства. Отвечает за качество каждой строчки.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Мария Кузнецова</h3>
+          <p class="card__meta">Менеджер по работе с клиентами. Поможет выбрать ткань и размер.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- История -->
     <section>
       <h2>Как всё начиналось</h2>
       <ol>
@@ -105,13 +106,11 @@
     </section>
   </main>
 
-  <!-- ПОДВАЛ -->
-  <footer>
-    <p><strong>CurtainHouse</strong> — салон штор и домашнего текстиля</p>
-    <p>ООО «КуртИнХаус»</p>
-    <p>&copy; 2026 CurtainHouse. Все права защищены.</p>
-    <p>Год разработки: 2026</p>
-    <p><a href="mailto:info@curtainhouse.example">info@curtainhouse.example</a></p>
+  <footer class="footer">
+    <p class="footer__title"><strong>CurtainHouse</strong> — салон штор</p>
+    <p class="footer__text">ООО «КуртИнХаус» · &copy; 2026 · Год разработки: 2026</p>
+    <p><a href="mailto:info@curtainhouse.example" class="footer__link">info@curtainhouse.example</a></p>
   </footer>
+  <script src="js/theme.js"></script>
 </body>
 </html>

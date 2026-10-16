@@ -3,180 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Шторы для дома от CurtainHouse: блэкаут, лён, тюль, римские и рулонные. Пошив на заказ, бесплатный замер.">
+  <meta name="description" content="Шторы для дома от CurtainHouse: блэкаут, лён, тюль.">
   <title>Шторы для дома — CurtainHouse</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <a href="index.html">
-    <img src="10.jpg" alt="Логотип CurtainHouse" width="60" height="60">
-    <strong>CurtainHouse</strong>
-  </a>
-  <nav aria-label="Основное меню">
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog.html">Каталог</a></li>
-      <li><a href="product.html">О товаре</a></li>
-      <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="faq.html" >Вопросы</a></li>
-      <li><a href="about.html">О компании</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
-      <li><a href="login.html">Вход</a></li>
-      <li><a href="register.html">Регистрация</a></li>
-      <li><a href="profile.html">Кабинет</a></li>
-    </ul>
-  </nav>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "Презентация коллекции штор «Осень 2026»",
-  "startDate": "2026-10-20T18:00",
-  "endDate": "2026-10-20T20:00",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "location": {
-    "@type": "Place",
-    "name": "Салон CurtainHouse",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "ул. Тканевая, 15",
-      "addressLocality": "Москва",
-      "postalCode": "101000",
-      "addressCountry": "RU"
-    }
-  },
-  "image": [
-    "https://poko85678-arch.github.io/curtain-shop/assets/images/curtain-1.jpg"
-  ],
-  "description": "Презентация новой коллекции штор «Осень 2026». Дизайнеры покажут новинки тканей, расскажут о трендах и помогут подобрать шторы под интерьер.",
-  "offers": {
-    "@type": "Offer",
-    "url": "https://poko85678-arch.github.io/curtain-shop/product.html",
-    "price": "0",
-    "priceCurrency": "RUB",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2026-10-01T00:00"
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "CurtainHouse",
-    "url": "https://poko85678-arch.github.io/curtain-shop/"
-  },
-  "performer": {
-    "@type": "Organization",
-    "name": "CurtainHouse"
-  }
-}
-</script>
-</header>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-  <main>
-    <nav aria-label="Хлебные крошки">
-      <a href="index.html">Главная</a> /
-      <a href="catalog.html">Каталог</a> /
-      <span>Шторы для дома</span>
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="10.jpg" alt="Логотип CurtainHouse" width="48" height="48">
+      <strong>CurtainHouse</strong>
+    </a>
+    <label class="theme-toggle" aria-label="Переключить тему">
+  <input type="checkbox" class="theme-toggle__input" id="theme-toggle">
+  <span class="theme-toggle__icon">🌙</span>
+</label>
+    <input type="checkbox" id="burger" class="header__burger-input">
+    <label for="burger" class="header__burger" aria-label="Меню">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </label>
+    <nav class="header__nav" aria-label="Основное меню">
+      <ul class="header__menu">
+        <li><a href="index.html" class="header__menu-link">Главная</a></li>
+        <li><a href="catalog.html" class="header__menu-link">Каталог</a></li>
+        <li><a href="product.html" class="header__menu-link header__menu-link--active" aria-current="page">О товаре</a></li>
+        <li><a href="delivery.html" class="header__menu-link">Доставка</a></li>
+        <li><a href="faq.html" class="header__menu-link">Вопросы</a></li>
+        <li><a href="about.html" class="header__menu-link">О компании</a></li>
+        <li><a href="contacts.html" class="header__menu-link">Контакты</a></li>
+        <li><a href="login.html" class="header__menu-link">Вход</a></li>
+        <li><a href="register.html" class="header__menu-link">Регистрация</a></li>
+        <li><a href="profile.html" class="header__menu-link">Кабинет</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <article>
-      <h1>Шторы для дома</h1>
+  <main class="main" id="main">
+    <article class="product">
+      <h1 class="product__title">Шторы для дома</h1>
 
-      <figure>
-        <img src="11.jpg" alt="Коллекция штор CurtainHouse в интерьере" width="640" height="400">
+      <figure class="product__image">
+        <img src="11.jpg" alt="Коллекция штор CurtainHouse" width="640" height="400">
         <figcaption>Коллекция «Осень 2026» — более 500 тканей</figcaption>
       </figure>
 
-      <dl>
-        <dt>Типы</dt><dd>Блэкаут, лён, тюль, римские, рулонные</dd>
-        <dt>Материалы</dt><dd>Хлопок, лён, полиэстер, бархат</dd>
-        <dt>Цена</dt><dd>от 1 200 ₽ / м²</dd>
-        <dt>Пошив</dt><dd>По индивидуальным размерам</dd>
-        <dt>Наличие</dt><dd>Более 500 тканей на складе</dd>
-      </dl>
+      <div class="product__info">
+        <h2>Характеристики</h2>
+        <dl>
+          <dt>Типы</dt><dd>Блэкаут, лён, тюль, римские, рулонные</dd>
+          <dt>Материалы</dt><dd>Хлопок, лён, полиэстер, бархат</dd>
+          <dt>Цена</dt><dd>от 1 200 ₽ / м²</dd>
+          <dt>Пошив</dt><dd>По индивидуальным размерам</dd>
+          <dt>Наличие</dt><dd>Более 500 тканей</dd>
+        </dl>
 
-      <h2>Описание</h2>
-      <p>В нашем каталоге — шторы на любой вкус: плотный блэкаут для спальни,
-         лёгкий тюль для гостиной, практичные римские и рулонные модели для кухни
-         и кабинета. Все ткани можно посмотреть в салоне или заказать онлайн.</p>
+        <h2>Что входит в стоимость</h2>
+        <ul>
+          <li>Замер и консультация дизайнера.</li>
+          <li>Пошив на собственном производстве.</li>
+          <li>Доставка и установка карниза.</li>
+          <li>Гарантия 3 года.</li>
+        </ul>
+      </div>
 
-      <h2>Что входит в стоимость</h2>
-      <ul>
-        <li>Замер и консультация дизайнера — бесплатно.</li>
-        <li>Пошив на собственном производстве.</li>
-        <li>Доставка и установка карниза.</li>
-        <li>Гарантия 3 года.</li>
-      </ul>
+      <div class="product__order">
+        <h2>Оформить заказ</h2>
+        <form class="form" action="order.php" method="post">
+          <input type="hidden" name="product_id" value="1">
 
+          <div class="form__field">
+            <label class="form__label" for="name">Имя</label>
+            <input class="form__input" type="text" id="name" name="name" required minlength="2" maxlength="50">
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="email">E-mail</label>
+            <input class="form__input" type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="phone">Телефон</label>
+            <input class="form__input" type="tel" id="phone" name="phone" required pattern="\+7\d{10}"
+                   placeholder="+79991234567" title="+7 и 10 цифр">
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="type">Тип штор</label>
+            <select class="form__select" id="type" name="type" required>
+              <option value="">Выберите тип</option>
+              <option value="blackout">Блэкаут</option>
+              <option value="linen">Лён</option>
+              <option value="tulle">Тюль</option>
+              <option value="roman">Римские</option>
+              <option value="roller">Рулонные</option>
+            </select>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="width">Ширина, см (50–500)</label>
+            <input class="form__input" type="number" id="width" name="width" min="50" max="500" required>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="height">Высота, см (50–400)</label>
+            <input class="form__input" type="number" id="height" name="height" min="50" max="400" required>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="qty">Комплектов (1–10)</label>
+            <input class="form__input" type="number" id="qty" name="qty" min="1" max="10" value="1" required>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="install_date">Дата установки</label>
+            <input class="form__input" type="date" id="install_date" name="install_date" required>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="address">Адрес доставки</label>
+            <textarea class="form__textarea" id="address" name="address" rows="2" maxlength="300" required></textarea>
+          </div>
+
+          <div class="form__field">
+            <label class="form__checkbox-label"><input class="form__checkbox" type="checkbox" name="agree" value="1" required>
+              Согласен(на) с обработкой данных</label>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Оформить заказ</button>
+        </form>
+      </div>
     </article>
-
-    <section>
-      <h2>Оформить заказ</h2>
-      <form action="order.php" method="post">
-        <input type="hidden" name="product_id" value="1">
-
-        <p>
-          <label for="name">Имя</label><br>
-          <input type="text" id="name" name="name" required minlength="2" maxlength="50">
-        </p>
-        <p>
-          <label for="email">E-mail</label><br>
-          <input type="email" id="email" name="email" required placeholder="you@example.com">
-        </p>
-        <p>
-          <label for="phone">Телефон</label><br>
-          <input type="tel" id="phone" name="phone" required pattern="\+7\d{10}"
-                 placeholder="+79991234567" title="+7 и 10 цифр">
-        </p>
-        <p>
-          <label for="type">Тип штор</label><br>
-          <select id="type" name="type" required>
-            <option value="">Выберите тип</option>
-            <option value="blackout">Блэкаут</option>
-            <option value="linen">Лён</option>
-            <option value="tulle">Тюль</option>
-            <option value="roman">Римские</option>
-            <option value="roller">Рулонные</option>
-          </select>
-        </p>
-        <p>
-          <label for="width">Ширина, см (50–500)</label><br>
-          <input type="number" id="width" name="width" min="50" max="500" required>
-        </p>
-        <p>
-          <label for="height">Высота, см (50–400)</label><br>
-          <input type="number" id="height" name="height" min="50" max="400" required>
-        </p>
-        <p>
-          <label for="qty">Комплектов (1–10)</label><br>
-          <input type="number" id="qty" name="qty" min="1" max="10" value="1" required>
-        </p>
-        <p>
-          <label for="install_date">Дата установки</label><br>
-          <input type="date" id="install_date" name="install_date" required>
-        </p>
-        <p>
-          <label for="address">Адрес доставки</label><br>
-          <textarea id="address" name="address" rows="2" cols="40" maxlength="300" required></textarea>
-        </p>
-        <p>
-          <label for="comment">Комментарий</label><br>
-          <textarea id="comment" name="comment" rows="2" cols="40" maxlength="300"></textarea>
-        </p>
-        <p>
-          <label><input type="checkbox" name="agree" value="1" required>
-            Согласен(на) с обработкой данных</label>
-        </p>
-
-        <button type="submit">Оформить заказ</button>
-      </form>
-    </section>
   </main>
 
-  <footer>
-    <p><strong>CurtainHouse</strong> — салон штор</p>
-    <p>ООО «КуртИнХаус» · &copy; 2026 · Год разработки: 2026</p>
-    <p><a href="mailto:info@curtainhouse.example">info@curtainhouse.example</a></p>
+  <footer class="footer">
+    <p class="footer__title"><strong>CurtainHouse</strong> — салон штор</p>
+    <p class="footer__text">ООО «КуртИнХаус» · &copy; 2026 · Год разработки: 2026</p>
+    <p><a href="mailto:info@curtainhouse.example" class="footer__link">info@curtainhouse.example</a></p>
   </footer>
+    <script src="js/theme.js"></script>
 </body>
 </html>

@@ -3,63 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Вход в личный кабинет CurtainHouse.">
   <title>Вход — CurtainHouse</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- ШАПКА -->
-<header>
-  <a href="index.html">
-    <img src="10.jpg" alt="Логотип CurtainHouse" width="60" height="60">
-    <strong>CurtainHouse</strong>
-  </a>
-  <nav aria-label="Основное меню">
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog.html">Каталог</a></li>
-      <li><a href="product.html">О товаре</a></li>
-      <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="faq.html" >Вопросы</a></li>
-      <li><a href="about.html">О компании</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
-      <li><a href="login.html">Вход</a></li>
-      <li><a href="register.html">Регистрация</a></li>
-      <li><a href="profile.html">Кабинет</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-  <main>
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="10.jpg" alt="Логотип CurtainHouse" width="48" height="48">
+      <strong>CurtainHouse</strong>
+    </a>
+    <label class="theme-toggle" aria-label="Переключить тему">
+  <input type="checkbox" class="theme-toggle__input" id="theme-toggle">
+  <span class="theme-toggle__icon">🌙</span>
+</label>
+    <input type="checkbox" id="burger" class="header__burger-input">
+    <label for="burger" class="header__burger" aria-label="Меню">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </label>
+    <nav class="header__nav" aria-label="Основное меню">
+      <ul class="header__menu">
+        <li><a href="index.html" class="header__menu-link">Главная</a></li>
+        <li><a href="catalog.html" class="header__menu-link">Каталог</a></li>
+        <li><a href="product.html" class="header__menu-link">О товаре</a></li>
+        <li><a href="delivery.html" class="header__menu-link">Доставка</a></li>
+        <li><a href="faq.html" class="header__menu-link">Вопросы</a></li>
+        <li><a href="about.html" class="header__menu-link">О компании</a></li>
+        <li><a href="contacts.html" class="header__menu-link">Контакты</a></li>
+        <li><a href="login.html" class="header__menu-link header__menu-link--active" aria-current="page">Вход</a></li>
+        <li><a href="register.html" class="header__menu-link">Регистрация</a></li>
+        <li><a href="profile.html" class="header__menu-link">Кабинет</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main" id="main">
     <h1>Вход</h1>
-    <form action="login.php" method="post">
-      <p>
-        <label for="email">E-mail</label><br>
-        <input type="email" id="email" name="email" required autocomplete="email">
-      </p>
-
-      <p>
-        <label for="password">Пароль</label><br>
-        <input type="password" id="password" name="password" required
-               autocomplete="current-password">
-      </p>
-
-      <p>
-        <label><input type="checkbox" name="remember" value="1"> Запомнить меня</label>
-      </p>
-
-      <button type="submit">Войти</button>
+    <form class="form" action="login.php" method="post">
+      <div class="form__field">
+        <label class="form__label" for="email">E-mail</label>
+        <input class="form__input" type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="password">Пароль</label>
+        <input class="form__input" type="password" id="password" name="password" required autocomplete="current-password">
+      </div>
+      <div class="form__field">
+        <label class="form__checkbox-label"><input class="form__checkbox" type="checkbox" name="remember" value="1"> Запомнить меня</label>
+      </div>
+      <button type="submit" class="btn btn--primary">Войти</button>
       <p>Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
     </form>
   </main>
 
-  <!-- ПОДВАЛ -->
-  <footer>
-    <p><strong>CurtainHouse</strong> — салон штор и домашнего текстиля</p>
-    <p>ООО «КуртИнХаус»</p>
-    <p>&copy; 2026 CurtainHouse. Все права защищены.</p>
-    <p>Год разработки: 2026</p>
-    <p><a href="mailto:info@curtainhouse.example">info@curtainhouse.example</a></p>
+  <footer class="footer">
+    <p class="footer__title"><strong>CurtainHouse</strong> — салон штор</p>
+    <p class="footer__text">ООО «КуртИнХаус» · &copy; 2026 · Год разработки: 2026</p>
+    <p><a href="mailto:info@curtainhouse.example" class="footer__link">info@curtainhouse.example</a></p>
   </footer>
+    <script src="js/theme.js"></script>
 </body>
 </html>

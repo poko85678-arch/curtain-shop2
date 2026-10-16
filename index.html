@@ -5,66 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CurtainHouse — интернет-магазин штор: готовые решения и пошив на заказ.">
   <title>CurtainHouse — магазин штор</title>
-<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <a href="index.html">
-    <img src="10.jpg" alt="Логотип CurtainHouse" width="60" height="60">
-    <strong>CurtainHouse</strong>
-  </a>
-  <nav aria-label="Основное меню">
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog.html">Каталог</a></li>
-      <li><a href="product.html">О товаре</a></li>
-      <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="faq.html" >Вопросы</a></li>
-      <li><a href="about.html">О компании</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
-      <li><a href="login.html">Вход</a></li>
-      <li><a href="register.html">Регистрация</a></li>
-      <li><a href="profile.html">Кабинет</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-  <main>
-    <!-- Секция-герой с единственным h1 -->
+  <!-- ШАПКА (см. раздел 3) -->
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="10.jpg" alt="Логотип CurtainHouse" width="48" height="48">
+      <strong>CurtainHouse</strong>
+    </a>
+    <label class="theme-toggle" aria-label="Переключить тему">
+  <input type="checkbox" class="theme-toggle__input" id="theme-toggle">
+  <span class="theme-toggle__icon">🌙</span>
+</label>
+    <input type="checkbox" id="burger" class="header__burger-input">
+    <label for="burger" class="header__burger" aria-label="Меню">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </label>
+    <nav class="header__nav" aria-label="Основное меню">
+      <ul class="header__menu">
+        <li><a href="index.html" class="header__menu-link header__menu-link--active" aria-current="page">Главная</a></li>
+        <li><a href="catalog.html" class="header__menu-link">Каталог</a></li>
+        <li><a href="product.html" class="header__menu-link">О товаре</a></li>
+        <li><a href="delivery.html" class="header__menu-link">Доставка</a></li>
+        <li><a href="faq.html" class="header__menu-link">Вопросы</a></li>
+        <li><a href="about.html" class="header__menu-link">О компании</a></li>
+        <li><a href="contacts.html" class="header__menu-link">Контакты</a></li>
+        <li><a href="login.html" class="header__menu-link">Вход</a></li>
+        <li><a href="register.html" class="header__menu-link">Регистрация</a></li>
+        <li><a href="profile.html" class="header__menu-link">Кабинет</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main" id="main">
     <section>
       <h1>Шторы, которые преображают дом</h1>
-      <p>Более 500 тканей, пошив на заказ, бесплатный замер.</p>
-      <p><a href="catalog.html">Перейти в каталог</a></p>
+      <p>Более 500 тканей, пошив на заказ, бесплатный замер и установка.</p>
+      <p><a href="catalog.html" class="section__link">Перейти в каталог</a></p>
     </section>
 
-    <!-- Преимущества -->
-    <section>
-      <h2>Почему выбирают нас</h2>
-      <ul>
-        <li>Собственное производство в городе</li>
-        <li>Замер и установка под ключ</li>
-        <li>Гарантия 3 года на все изделия</li>
-      </ul>
-    </section>
-
-    <!-- Хиты продаж -->
     <section>
       <h2>Хиты продаж</h2>
-
-      <article>
-        <img src="1.jpg" alt="Шторы льняные бежевые в интерьере" width="320" height="200">
-        <h3><a href="product.html">Шторы льняные «Беже»</a></h3>
-        <p>2 900 ₽ / м²</p>
-      </article>
-
-      <article>
-        <img src="4.jpg" alt="Шторы блэкаут чёрные" width="320" height="200">
-        <h3><a href="product.html">Шторы блэкаут «Ночь»</a></h3>
-        <p>3 500 ₽ / м²</p>
-      </article>
+      <div class="card-grid">
+        <article class="card">
+          <img class="card__image" src="1.jpg" alt="Шторы льняные бежевые" width="400" height="300">
+          <h3 class="card__title"><a href="product.html" class="card__title-link">Шторы «Беже»</a></h3>
+          <p class="card__meta">Лён</p>
+          <p class="card__price">2 900 ₽ / м²</p>
+          <a href="product.html" class="btn btn--primary card__btn">Подробнее</a>
+        </article>
+        <article class="card">
+          <img class="card__image" src="4.jpg" alt="Шторы блэкаут чёрные" width="400" height="300">
+          <h3 class="card__title"><a href="product.html" class="card__title-link">Шторы «Ночь»</a></h3>
+          <p class="card__meta">Блэкаут</p>
+          <p class="card__price">3 500 ₽ / м²</p>
+          <a href="product.html" class="btn btn--primary card__btn">Подробнее</a>
+        </article>
+      </div>
     </section>
 
-    <!-- Как заказать -->
     <section>
       <h2>Как сделать заказ</h2>
       <ol>
@@ -75,13 +79,11 @@
     </section>
   </main>
 
-  <!-- ПОДВАЛ (см. Этап 3) -->
-   <footer>
-  <p><strong>CurtainHouse</strong> — салон штор и домашнего текстиля</p>
-  <p>ООО «КуртИнХаус»</p>
-  <p>&copy; 2026 CurtainHouse. Все права защищены.</p>
-  <p>Год разработки: 2026</p>
-  <p><a href="mailto:info@curtainhouse.example">info@curtainhouse.example</a></p>
-</footer>
+  <footer class="footer">
+    <p class="footer__title"><strong>CurtainHouse</strong> — салон штор</p>
+    <p class="footer__text">ООО «КуртИнХаус» · &copy; 2026 · Год разработки: 2026</p>
+    <p><a href="mailto:info@curtainhouse.example" class="footer__link">info@curtainhouse.example</a></p>
+  </footer>
+    <script src="js/theme.js"></script>
 </body>
 </html>

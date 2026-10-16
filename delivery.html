@@ -8,32 +8,42 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- ШАПКА -->
-<header>
-  <a href="index.html">
-    <img src="10.jpg" alt="Логотип CurtainHouse" width="60" height="60">
-    <strong>CurtainHouse</strong>
-  </a>
-  <nav aria-label="Основное меню">
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog.html">Каталог</a></li>
-      <li><a href="product.html">О товаре</a></li>
-      <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="faq.html" >Вопросы</a></li>
-      <li><a href="about.html">О компании</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
-      <li><a href="login.html">Вход</a></li>
-      <li><a href="register.html">Регистрация</a></li>
-      <li><a href="profile.html">Кабинет</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-  <main>
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="10.jpg" alt="Логотип CurtainHouse" width="48" height="48">
+      <strong>CurtainHouse</strong>
+    </a>
+    <label class="theme-toggle" aria-label="Переключить тему">
+  <input type="checkbox" class="theme-toggle__input" id="theme-toggle">
+  <span class="theme-toggle__icon">🌙</span>
+</label>
+    <input type="checkbox" id="burger" class="header__burger-input">
+    <label for="burger" class="header__burger" aria-label="Меню">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </label>
+    <nav class="header__nav" aria-label="Основное меню">
+      <ul class="header__menu">
+        <li><a href="index.html" class="header__menu-link">Главная</a></li>
+        <li><a href="catalog.html" class="header__menu-link">Каталог</a></li>
+        <li><a href="product.html" class="header__menu-link">О товаре</a></li>
+        <li><a href="delivery.html" class="header__menu-link header__menu-link--active" aria-current="page">Доставка</a></li>
+        <li><a href="faq.html" class="header__menu-link">Вопросы</a></li>
+        <li><a href="about.html" class="header__menu-link">О компании</a></li>
+        <li><a href="contacts.html" class="header__menu-link">Контакты</a></li>
+        <li><a href="login.html" class="header__menu-link">Вход</a></li>
+        <li><a href="register.html" class="header__menu-link">Регистрация</a></li>
+        <li><a href="profile.html" class="header__menu-link">Кабинет</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main" id="main">
     <h1>Доставка и оплата</h1>
 
-    <!-- Доставка по городу -->
     <section>
       <h2>Доставка по городу</h2>
       <p>Курьером в течение 2–3 рабочих дней после готовности заказа.
@@ -45,7 +55,6 @@
       </ul>
     </section>
 
-    <!-- Доставка по России -->
     <section>
       <h2>Доставка по России</h2>
       <p>Отправляем заказы через СДЭК и Почту России. Срок — от 3 до 14 дней
@@ -54,9 +63,59 @@
          и зависит от веса и габаритов посылки.</p>
     </section>
 
-    
+    <section>
+      <h2>Тарифы на доставку</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <caption>Стоимость доставки по городу и области</caption>
+          <thead>
+            <tr>
+              <th scope="col">Зона</th>
+              <th scope="col">Срок</th>
+              <th scope="col">Стоимость</th>
+              <th scope="col">Бесплатно от</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>В черте города</td>
+              <td>2–3 дня</td>
+              <td>500 ₽</td>
+              <td>15 000 ₽</td>
+            </tr>
+            <tr>
+              <td>Пригород (до 30 км)</td>
+              <td>3–5 дней</td>
+              <td>800 ₽</td>
+              <td>20 000 ₽</td>
+            </tr>
+            <tr>
+              <td>Область (30–100 км)</td>
+              <td>5–7 дней</td>
+              <td>1 200 ₽</td>
+              <td>30 000 ₽</td>
+            </tr>
+            <tr>
+              <td>Другие регионы (СДЭК)</td>
+              <td>от 3 дней</td>
+              <td>по тарифу СДЭК</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    <!-- Возврат и обмен -->
+    <section>
+      <h2>Способы оплаты</h2>
+      <ul>
+        <li><strong>Банковской картой</strong> — онлайн на сайте или курьеру при получении.</li>
+        <li><strong>Наличными</strong> — курьеру при получении заказа.</li>
+        <li><strong>По счёту</strong> — для юридических лиц.</li>
+        <li><strong>Рассрочка</strong> — от 3 до 12 месяцев без переплаты.</li>
+      </ul>
+    </section>
+
     <section>
       <h2>Возврат и обмен</h2>
       <p>Если шторы не подошли по цвету или размеру — верните их в течение
@@ -65,65 +124,13 @@
       <p>Изготовленные по индивидуальным размерам шторы возврату не подлежат,
          если это не связано с браком.</p>
     </section>
-
-    <!-- Таблица тарифов -->
-    <section>
-      <h2>Тарифы на доставку</h2>
-      <table>
-        <caption>Стоимость доставки по городу и области</caption>
-        <thead>
-          <tr>
-            <th scope="col">Зона</th>
-            <th scope="col">Срок</th>
-            <th scope="col">Стоимость</th>
-            <th scope="col">Бесплатно от</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>В черте города</td>
-            <td>2–3 дня</td>
-            <td>500 ₽</td>
-            <td>15 000 ₽</td>
-          </tr>
-          <tr>
-            <td>Пригород (до 30 км)</td>
-            <td>3–5 дней</td>
-            <td>800 ₽</td>
-            <td>20 000 ₽</td>
-          </tr>
-          <tr>
-            <td>Область (30–100 км)</td>
-            <td>5–7 дней</td>
-            <td>1 200 ₽</td>
-            <td>30 000 ₽</td>
-          </tr>
-          <tr>
-            <td>Другие регионы (СДЭК)</td>
-            <td>от 3 дней</td>
-            <td>по тарифу СДЭК</td>
-            <td>—</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Боковой блок -->
-    <aside aria-label="Контакты службы доставки">
-      <h2>Вопросы по доставке</h2>
-      <p>Звоните: <a href="tel:+70000000000">+7 (000) 000-00-00</a></p>
-      <p>Пишите: <a href="mailto:delivery@curtainhouse.example">delivery@curtainhouse.example</a></p>
-      <p>Отдел доставки работает: Пн–Пт, 9:00–18:00.</p>
-    </aside>
   </main>
 
-  <!-- ПОДВАЛ (ФУТЕР) -->
-  <footer>
-    <p><strong>CurtainHouse</strong> — салон штор и домашнего текстиля</p>
-    <p>ООО «КуртИнХаус»</p>
-    <p>&copy; 2026 CurtainHouse. Все права защищены.</p>
-    <p>Год разработки: 2026</p>
-    <p><a href="mailto:info@curtainhouse.example">info@curtainhouse.example</a></p>
+  <footer class="footer">
+    <p class="footer__title"><strong>CurtainHouse</strong> — салон штор</p>
+    <p class="footer__text">ООО «КуртИнХаус» · &copy; 2026 · Год разработки: 2026</p>
+    <p><a href="mailto:info@curtainhouse.example" class="footer__link">info@curtainhouse.example</a></p>
   </footer>
+    <script src="js/theme.js"></script>
 </body>
 </html>

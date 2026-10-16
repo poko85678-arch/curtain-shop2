@@ -3,120 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог штор CurtainHouse: блэкаут, лён, тюль, римские и рулонные шторы.">
+  <meta name="description" content="Каталог штор CurtainHouse: блэкаут, лён, тюль, римские и рулонные.">
   <title>Каталог штор — CurtainHouse</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <a href="index.html">
-      <img src="10.jpg" alt="Логотип CurtainHouse" width="60" height="60">
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="10.jpg" alt="Логотип CurtainHouse" width="48" height="48">
       <strong>CurtainHouse</strong>
     </a>
-    <nav aria-label="Основное меню">
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html" >Каталог</a></li>
-        <li><a href="product.html">О товаре</a></li>
-        <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="faq.html" >Вопросы</a></li>
-        <li><a href="about.html">О компании</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-        <li><a href="login.html">Вход</a></li>
-        <li><a href="register.html">Регистрация</a></li>
-        <li><a href="profile.html">Кабинет</a></li>
+    <label class="theme-toggle" aria-label="Переключить тему">
+  <input type="checkbox" class="theme-toggle__input" id="theme-toggle">
+  <span class="theme-toggle__icon">🌙</span>
+</label>
+    <input type="checkbox" id="burger" class="header__burger-input">
+    <label for="burger" class="header__burger" aria-label="Меню">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </label>
+    <nav class="header__nav" aria-label="Основное меню">
+      <ul class="header__menu">
+        <li><a href="index.html" class="header__menu-link">Главная</a></li>
+        <li><a href="catalog.html" class="header__menu-link header__menu-link--active" aria-current="page">Каталог</a></li>
+        <li><a href="product.html" class="header__menu-link">О товаре</a></li>
+        <li><a href="delivery.html" class="header__menu-link">Доставка</a></li>
+        <li><a href="faq.html" class="header__menu-link">Вопросы</a></li>
+        <li><a href="about.html" class="header__menu-link">О компании</a></li>
+        <li><a href="contacts.html" class="header__menu-link">Контакты</a></li>
+        <li><a href="login.html" class="header__menu-link">Вход</a></li>
+        <li><a href="register.html" class="header__menu-link">Регистрация</a></li>
+        <li><a href="profile.html" class="header__menu-link">Кабинет</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main class="main" id="main">
     <h1>Каталог штор</h1>
 
-    <aside>
-      <h2>Фильтры</h2>
-      <form action="catalog.html" method="get">
-        <p>
-          <label for="q">Поиск</label><br>
-          <input type="search" id="q" name="q" placeholder="Например, лён">
-        </p>
-        <p>
-          <label for="type">Тип</label><br>
-          <select id="type" name="type">
-            <option value="">Все</option>
-            <option value="blackout">Блэкаут</option>
-            <option value="linen">Лён</option>
-            <option value="tulle">Тюль</option>
-            <option value="roman">Римские</option>
-            <option value="roller">Рулонные</option>
-          </select>
-        </p>
-        <fieldset>
-          <legend>Цена</legend>
-          <label><input type="radio" name="price" value="any" checked> Любая</label><br>
-          <label><input type="radio" name="price" value="low"> До 3000 ₽</label><br>
-          <label><input type="radio" name="price" value="high"> От 3000 ₽</label>
-        </fieldset>
-        <p>
-          <label for="date">Наличие с</label><br>
-          <input type="date" id="date" name="date">
-        </p>
-        <p>
-          <label><input type="checkbox" name="sale" value="1"> Со скидкой</label>
-        </p>
-        <button type="submit">Применить</button>
-        <button type="reset">Сбросить</button>
-      </form>
-    </aside>
+    <div class="catalog">
+      <aside class="catalog__aside">
+        <h2 class="catalog__aside-title">Фильтры</h2>
+        <form class="form" action="catalog.html" method="get">
+          <div class="form__field">
+            <label class="form__label" for="q">Поиск</label>
+            <input class="form__input" type="search" id="q" name="q" placeholder="Например, лён">
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="type">Тип</label>
+            <select class="form__select" id="type" name="type">
+              <option value="">Все</option>
+              <option value="blackout">Блэкаут</option>
+              <option value="linen">Лён</option>
+              <option value="tulle">Тюль</option>
+              <option value="roman">Римские</option>
+              <option value="roller">Рулонные</option>
+            </select>
+          </div>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Цена</legend>
+            <label class="form__checkbox-label"><input class="form__checkbox" type="radio" name="price" value="any" checked> Любая</label>
+            <label class="form__checkbox-label"><input class="form__checkbox" type="radio" name="price" value="low"> До 3000 ₽</label>
+            <label class="form__checkbox-label"><input class="form__checkbox" type="radio" name="price" value="high"> От 3000 ₽</label>
+          </fieldset>
+          <div class="form__field">
+            <label class="form__label" for="date">Наличие с</label>
+            <input class="form__input" type="date" id="date" name="date">
+          </div>
+          <div class="form__field">
+            <label class="form__checkbox-label"><input class="form__checkbox" type="checkbox" name="sale" value="1"> Со скидкой</label>
+          </div>
+          <button type="submit" class="btn btn--primary">Применить</button>
+          <button type="reset" class="btn btn--secondary">Сбросить</button>
+        </form>
+      </aside>
 
-    <section aria-label="Список товаров">
-      <h2>Найдено: 5 товаров</h2>
+      <section class="catalog__content card-grid" aria-label="Список товаров">
+        <h2 class="card-grid__title">Найдено: 5 товаров</h2>
 
-      <article>
-        <img src="1.jpg" alt="Шторы льняные бежевые" width="400" height="300">
-        <h3><a href="product.html">Шторы «Беже»</a></h3>
-        <p>Лён</p>
-        <p><strong>2 900 ₽</strong> / м²</p>
-        <a href="product.html">Подробнее</a>
-      </article>
+        <article class="card">
+          <img class="card__image" src="1.jpg" alt="Шторы льняные бежевые" width="400" height="300">
+          <h3 class="card__title"><a href="product.html" class="card__title-link">Шторы «Беже»</a></h3>
+          <p class="card__meta">Лён</p>
+          <p class="card__price">2 900 ₽ / м²</p>
+          <a href="product.html" class="btn btn--primary card__btn">Подробнее</a>
+        </article>
 
-      <article>
-        <img src="2.jpg" alt="Шторы блэкаут чёрные" width="400" height="300">
-        <h3><a href="product.html">Шторы «Ночь»</a></h3>
-        <p>Блэкаут</p>
-        <p><strong>3 500 ₽</strong> / м²</p>
-        <a href="product.html">Подробнее</a>
-      </article>
+        <article class="card">
+          <img class="card__image" src="4.jpg" alt="Шторы блэкаут чёрные" width="400" height="300">
+          <h3 class="card__title"><a href="product.html" class="card__title-link">Шторы «Ночь»</a></h3>
+          <p class="card__meta">Блэкаут</p>
+          <p class="card__price">3 500 ₽ / м²</p>
+          <a href="product.html" class="btn btn--primary card__btn">Подробнее</a>
+        </article>
 
-      <article>
-        <img src="3.jpg" alt="Тюль белая" width="400" height="300">
-        <h3><a href="product.html">Тюль «Облако»</a></h3>
-        <p>Тюль</p>
-        <p><strong>1 200 ₽</strong> / м²</p>
-        <a href="product.html">Подробнее</a>
-      </article>
+        <article class="card">
+          <img class="card__image" src="2.jpg" alt="Тюль белая" width="400" height="300">
+          <h3 class="card__title"><a href="product.html" class="card__title-link">Тюль «Облако»</a></h3>
+          <p class="card__meta">Тюль</p>
+          <p class="card__price">1 200 ₽ / м²</p>
+          <a href="product.html" class="btn btn--primary card__btn">Подробнее</a>
+        </article>
 
-      <article>
-        <img src="4.jpg" alt="Римские шторы" width="400" height="300">
-        <h3><a href="product.html">Римские «Ретро»</a></h3>
-        <p>Римские</p>
-        <p><strong>4 200 ₽</strong> / м²</p>
-        <a href="product.html">Подробнее</a>
-      </article>
+        <article class="card">
+          <img class="card__image" src="3.jpg" alt="Римские шторы" width="400" height="300">
+          <h3 class="card__title"><a href="product.html" class="card__title-link">Римские «Ретро»</a></h3>
+          <p class="card__meta">Римские</p>
+          <p class="card__price">4 200 ₽ / м²</p>
+          <a href="product.html" class="btn btn--primary card__btn">Подробнее</a>
+        </article>
 
-      <article>
-        <img src="5.jpg" alt="Рулонные шторы серые" width="400" height="300">
-        <h3><a href="product.html">Рулонные «Графит»</a></h3>
-        <p>Рулонные</p>
-        <p><strong>2 100 ₽</strong> / м²</p>
-        <a href="product.html">Подробнее</a>
-      </article>
-    </section>
+        <article class="card">
+          <img class="card__image" src="7.jpg" alt="Рулонные шторы серые" width="400" height="300">
+          <h3 class="card__title"><a href="product.html" class="card__title-link">Рулонные «Графит»</a></h3>
+          <p class="card__meta">Рулонные</p>
+          <p class="card__price">2 100 ₽ / м²</p>
+          <a href="product.html" class="btn btn--primary card__btn">Подробнее</a>
+        </article>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <p><strong>CurtainHouse</strong> — салон штор</p>
-    <p>ООО «КуртИнХаус» · &copy; 2026 · Год разработки: 2026</p>
-    <p><a href="mailto:info@curtainhouse.example">info@curtainhouse.example</a></p>
+  <footer class="footer">
+    <p class="footer__title"><strong>CurtainHouse</strong> — салон штор</p>
+    <p class="footer__text">ООО «КуртИнХаус» · &copy; 2026 · Год разработки: 2026</p>
+    <p><a href="mailto:info@curtainhouse.example" class="footer__link">info@curtainhouse.example</a></p>
   </footer>
+    <script src="js/theme.js"></script>
 </body>
 </html>
